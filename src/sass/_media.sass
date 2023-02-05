@@ -75,6 +75,28 @@
 		&_mobile
 			margin: 0 auto
 @media (max-width: 767px)
+	.hamburger
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 15px
+		display: block
+		width: 26px
+		span
+			display: block
+			height: 2px
+			background-color: #fff
+			margin-bottom: 2px
+			transition: 0.5s all
+		&_active
+			span
+				margin-bottom: -2px
+				&:nth-child(1)
+					transform: rotate(45deg)
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					transform: rotate(-45deg)
 	.menu
 		height: 100vh
 		position: fixed
@@ -88,10 +110,12 @@
 		background-color: rgba(0, 0, 0, 0.8)
 		transition: 0.6s all
 		&_active
+			padding-top: 100px
+			display: block
 			left: 0
 		&_item
 			border: none
-			margin: 10px 0
+			margin: 15px 0
 			padding-right: 0
 		&_link
 			font-size: 20px
@@ -105,11 +129,36 @@
 			display: none
 		&_btn
 			position: relative
-			width: 30%
+			width: 50%
 			margin: 0
-			height: 30px
-			left: 365px
+			height: 40px
+			right: -385px
 		&_phone
 			font-size: 20px
 			margin-top: 20px
+
+@media (max-width: 575px)
+
+	.subheader
+		position: relative
+		&_phone
+			position: absolute
+			font-size: 12px
+			top: 0px
+			right: 10px
+			margin-top: 10px
+		&_logo
+			img
+				width: 50%
+		&_btn
+			position: absolute
+			top: 30px
+			right: 20px
+			font-size: 10px
+			height: 40px
+			width: 70px
+			
+	.global
+		&_descr
+			line-height: 0
 
